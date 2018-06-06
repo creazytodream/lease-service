@@ -5,40 +5,49 @@ package com.cooperation.model;
  * @date 2018/6/6
  */
 public class UserVO {
-	private String id;
-	private String name;
-	private String address;
-	private String age;
+    private String id;
+    private String name;
+    private String address;
 
-	public String getId() {
-		return id;
-	}
+    public UserVO() {
+    }
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    public UserVO(String id, String name, String address) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+    }
 
-	public String getName() {
-		return name;
-	}
+    @Override
+    public String toString() {
+        return "UserVO{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                '}';
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public String getAddress() {
-		return address;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public void setAddress(String address) {
-		this.address = address;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getAge() {
-		return age;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setAge(String age) {
-		this.age = age;
-	}
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 }
