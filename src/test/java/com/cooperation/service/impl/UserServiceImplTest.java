@@ -1,9 +1,8 @@
 package com.cooperation.service.impl;
 
 import com.cooperation.model.UserInfo;
-import com.cooperation.service.UserService;
+import com.cooperation.service.impl.user.UserServiceImpl;
 import com.cooperation.utils.response.HttpResult;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +10,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Date;
-
-import static org.junit.Assert.*;
 
 /**
  * @Author: Alex isidea@outlook.com

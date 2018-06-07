@@ -1,4 +1,4 @@
-package com.cooperation.controller;
+package com.cooperation.controller.user;
 
 import com.cooperation.model.UserInfo;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping(value = "/user/")
-public class UserController {
+public class UserController extends com.cooperation.controller.user.BaseController {
 
     @PostMapping(value = "/login")
     public void userLogin(@RequestBody UserInfo userInfo){

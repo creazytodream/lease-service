@@ -1,4 +1,4 @@
-package com.cooperation.mapper;
+package com.cooperation.mapper.user;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.cooperation.model.UserInfo;

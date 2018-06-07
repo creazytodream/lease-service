@@ -1,9 +1,9 @@
-package com.cooperation.service.impl;
+package com.cooperation.service.impl.user;
 
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import com.cooperation.mapper.UserMapper;
+import com.cooperation.mapper.user.UserMapper;
 import com.cooperation.model.UserInfo;
-import com.cooperation.service.UserService;
+import com.cooperation.service.user.UserService;
 import com.cooperation.utils.Base64Utils;
 import com.cooperation.utils.IDUtils;
 import com.cooperation.utils.response.DefaultResultCode;

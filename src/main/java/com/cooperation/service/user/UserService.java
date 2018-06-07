@@ -1,4 +1,4 @@
-package com.cooperation.service;
+package com.cooperation.service.user;
 
 import com.baomidou.mybatisplus.service.IService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
