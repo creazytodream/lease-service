@@ -15,31 +15,31 @@ public interface UserService extends IService<UserInfo> {
     /**
      * 修改用户的状态
      */
-    int setUserStatus(@Param("userID")String userID,@Param("status")String status);
+    int setUserStatus(String userID,String status);
 
     /**
      * 修改用户的密码
      */
-    int setUserPwd(@Param("userID")String userID,@Param("pwd")String pwd);
+    int setUserPwd(String userID,String pwd);
 
     /**
      * 通过用户ID获取到用户
      */
-    UserInfo selectUserInfoByID(@Param("userID")String userID);
+    UserInfo selectUserInfoByID(UserInfo userInfo);
 
     /**
      * 用户登陆
      */
-    HttpResult userLogin(@Param("userInfo")UserInfo userInfo);
+    HttpResult userLogin(UserInfo userInfo);
 
     /**
      * 用户登出
      */
-    HttpResult userOut(@Param("userInfo") UserInfo userInfo);
+    HttpResult userOut(UserInfo userInfo);
 
     /**
      * 注册一个用户
      */
-    HttpResult registUserInfo(@Param("userInfo")UserInfo userInfo);
+    HttpResult registUserInfo(UserInfo userInfo);
 
 }

@@ -22,11 +22,4 @@ public interface UserMapper extends BaseMapper<UserInfo> {
      */
     int setUserPwd(@Param("userID")String userID,@Param("pwd")String pwd);
 
-    /**
-     * 通过用户ID获取到用户
-     */
-    UserInfo selectUserInfoByID(@Param("userID")String userID);
-
-
-
 }
