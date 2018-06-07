@@ -1,12 +1,7 @@
 package com.cooperation.utils;
 
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import org.apache.commons.lang3.StringUtils;
-
 import java.io.UnsupportedEncodingException;
-import java.net.IDN;
-import java.time.LocalDateTime;
-import java.time.ZoneOffset;
 import java.util.*;
 
 /**
@@ -52,17 +47,6 @@ public class Base64Utils {
             e.printStackTrace();
         }
         return null;
-    }
-
-    public static void main(String[] args) {
-
-        UUID uuid = UUID.nameUUIDFromBytes(UUID.randomUUID().toString().getBytes());
-        int i = uuid.hashCode();
-        String s = String.valueOf(i);
-        int length = s.length();
-        String substring = s.substring(length - 6);
-        System.out.println(substring);
-        System.out.println(i);
     }
 
 }

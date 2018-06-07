@@ -3,6 +3,7 @@ package com.cooperation.service.impl;
 import com.cooperation.model.UserInfo;
 import com.cooperation.service.UserService;
 import com.cooperation.utils.response.HttpResult;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,21 +23,37 @@ import static org.junit.Assert.*;
 public class UserServiceImplTest {
 
     @Autowired
-    private UserService userService;
+    private UserServiceImpl userService;
+
 
     @Test
     public void registUserInfo() {
-
         UserInfo userInfo = new UserInfo();
         userInfo.setCreateDate(new Date());
         userInfo.setEnable(true);
-        userInfo.setGender("男");
+        userInfo.setGender("女");
         userInfo.setHead("头像");
-        userInfo.setNickname("Alex");
-        userInfo.setPassword("123456");
+        userInfo.setNickname("El");
+        userInfo.setPassword("1234567");
         userInfo.setPhone(1111111);
-
         HttpResult httpResult = userService.registUserInfo(userInfo);
+        System.out.println(httpResult);
+
+    }
+
+    @Test
+    public void userLogin() {
+
+        UserInfo userInfo = new UserInfo();
+        userInfo.setCreateDate(new Date());
+        userInfo.setUserID("950001");
+        userInfo.setEnable(true);
+        userInfo.setGender("女");
+        userInfo.setHead("头像");
+        userInfo.setNickname("El");
+        userInfo.setPassword("1234567");
+        userInfo.setPhone(1111111);
+        HttpResult httpResult = userService.userLogin(userInfo);
         System.out.println(httpResult);
 
     }
