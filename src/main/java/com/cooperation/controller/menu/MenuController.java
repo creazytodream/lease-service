@@ -1,4 +1,4 @@
-package com.cooperation.controller.user.menu;
+package com.cooperation.controller;
 
 import com.cooperation.controller.user.BaseController;
 
