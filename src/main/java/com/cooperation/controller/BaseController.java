@@ -1,4 +1,4 @@
-package com.cooperation.controller.user;
+package com.cooperation.controller;
 
 public class BaseController {
 }
