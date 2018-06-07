@@ -1,0 +1,68 @@
+package com.cooperation.utils;
+
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import org.apache.commons.lang3.StringUtils;
+
+import java.io.UnsupportedEncodingException;
+import java.net.IDN;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
+import java.util.*;
+
+/**
+ * Base64加密，解密工具类
+ *
+ * @Author: Alex isidea@outlook.com
+ * @Date: Created in 11:28 2018/6/7
+ */
+public class Base64Utils {
+
+    private Base64Utils() {
+    }
+
+    /**
+     * 加密
+     * @param str
+     * @return
+     */
+    public static String encryption(String str){
+        try {
+            if (StringUtils.isBlank(str)) {
+                return null;
+            }
+            return Base64.getEncoder().encodeToString(str.getBytes("UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
+     * 解密
+     * @return
+     */
+    public static String decryption(String str){
+        try {
+            if (StringUtils.isBlank(str)) {
+                return null;
+            }
+            byte[] decode = Base64.getDecoder().decode(str);
+            return new String(decode,"UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static void main(String[] args) {
+
+        UUID uuid = UUID.nameUUIDFromBytes(UUID.randomUUID().toString().getBytes());
+        int i = uuid.hashCode();
+        String s = String.valueOf(i);
+        int length = s.length();
+        String substring = s.substring(length - 6);
+        System.out.println(substring);
+        System.out.println(i);
+    }
+
+}
