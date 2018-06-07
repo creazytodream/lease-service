@@ -30,6 +30,7 @@
         <guava.version>25.1-jre</guava.version>
         <lomkob.version>1.16.18</lomkob.version>
         <mybatis-plus.version>2.1.9</mybatis-plus.version>
+        <hutool-version>4.0.12</hutool-version>
     </properties>
 
     <dependencies>
@@ -113,8 +114,20 @@
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-            <version>4.0.12</version>
+            <version>${hutool-version}</version>
         </dependency>
+
+        <!-- servlet 依赖. -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+
 
     </dependencies>
 
